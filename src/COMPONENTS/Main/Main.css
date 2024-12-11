@@ -1,0 +1,231 @@
+.main{
+    flex:1;
+    min-height:100vh ;
+    padding-bottom:15vh;
+    position:relative;
+
+}
+
+.main .nav{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    font-size:22px;
+    padding:20px;
+    color:#585858;
+    /* background-color: green; */
+}
+.main .nav img{
+    width:40px;
+    border-radius: 50%;;
+}
+
+.main-container{
+    /* border:2px solid black; */
+    max-width:900px;
+    margin:auto;
+
+}
+
+.main .greet{
+    margin:50px 0px;
+    font-size:56px;
+    color:#c4c7c5;
+    padding:20px;
+
+}
+
+.main .greet span{
+    background:-webkit-linear-gradient(16deg,#050633,#b9eef1,darkblue);
+    /* This creates a linear gradient background that starts at a 16-degree angle, 
+    blending from #4b90ff (a blue color) to #ff5546 (a reddish-orange color).
+    -webkit- is a vendor prefix used for compatibility with WebKit-based browsers (like Chrome and Safari). */
+
+    -webkit-background-clip:text;
+    /* This property makes the background apply only to the text instead of the entire element.
+     So, the gradient is clipped to the shape of the text, meaning the text appears to have the gradient. */
+     -webkit-text-fill-color: transparent; 
+    /*This makes the actual color of the text transparent.
+     This is necessary because the text needs to be "invisible" in order to show the gradient background through the text itself. */
+
+}
+
+.main .cards{
+    /* border:2px solid brown; */
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+    gap:15px;
+    padding:20px;
+
+}
+
+.main .card{
+    height:200px;
+    padding:15px;
+    background-color:#d9e9fd;
+    border-radius:10px;
+    position:relative;
+    cursor:pointer;
+
+}
+
+.main .card img{
+    width:35px;
+    padding:5px;
+    position:absolute;
+    background-color:rgb(232, 223, 223);
+    border-radius:20px;
+    bottom:10px;
+    right:10px; 
+
+}
+
+.main .card p{
+    color:#585858;
+    font-size:17px;
+
+}
+
+.main .card:hover{
+    /* background: color #dfe4ea; wrong */
+    background:linear-gradient(295deg,rgb(255, 255, 255),rgba(172, 172, 175, 0.644));
+    transform: scale(1.12);
+    transition:.4s linear;
+    
+}
+
+.main-bottom{
+    /* border:2px solid yellow; */
+    position:absolute;
+    bottom:0;
+    width:100%;
+    max-width:900px;
+    padding:0px 20px;
+    margin:auto;
+
+}
+
+ .search-box{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    gap:20px;
+    background-color:#f0f4f9;
+    padding:10px 20px;
+    border-radius:50px;
+
+} 
+
+.search-box img{
+    width:24px;
+    cursor:pointer;
+}
+
+.search-box input{
+    flex:1;
+    background:transparent;
+    border:none;
+    outline:none;
+    padding:8px;
+    font-size:18px;
+
+} 
+
+.search-box div{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+}
+
+.main .bottom-info{
+    font-size:13px;
+    margin:15px auto;
+    text-align:center;
+    font-weight:300;
+
+}
+.result{
+    padding:0px 5%;
+    max-height:70vh;
+    overflow-y:scroll;
+}
+
+.result::-webkit-scrollbar{
+    display:none;
+}
+
+.result-title{
+    margin:40px 0px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+}
+
+.result img{
+    width:40px;
+    border-radius:50%;
+}
+
+.result-data{
+    display:flex;
+    align-items: start;
+
+}
+
+.loader{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+
+}
+
+.loader hr{
+    border-radius:4px;
+    border:none;
+    background-color:#f6f7f8;
+    background:linear-gradient(to right,#9ed7ff,#fff,#9ed7ff);
+    background-size:800px 50px;
+    height:20px;
+    animation:loader 3s infinite linear;
+}
+
+@keyframes loader{
+    0%{
+        background-position:-800px;
+    }
+    100%{
+        background-position:800px 0px;
+    }
+}
+
+.result-data{
+    font-size:17px;
+    font-weight:300;
+    line-height:1.8
+}
+
+@media(max-width:600px){
+    .main-bottom input{
+        flex:none;
+        width:150px;
+    }
+    .main-bottom img{
+        width:20px;
+    }
+
+    .search-box{
+        padding:5px 10px;
+    }
+
+    .search-box div{
+        gap:5px;
+    }
+    
+}
+
+
+
+
