@@ -39,7 +39,7 @@ const {onSent, recentPrompt,showResult,loading,resultData,setInput,input}=useCon
                     </div>
 
                     <div className="card">
-                        <p>Steps to avoid pregnancy</p>
+                        <p>How to get a job at Mphasis ?</p>
                         <img src={assets.message_icon} alt="" />
                     </div>
 
